@@ -47,14 +47,8 @@ while($cat=mysqli_fetch_assoc($categories_query)){
    
 <script>
 
-function myfunction(id){
-  document.getElementById("d"+id).addEventListener("click",function(
-                        ){
-                            console.log("HAHA");
-                            ajaxo(id);
-                        });
-}
-function ajaxo(str){
+document.addEventListener("DOMContentLoaded",myfunction(1));
+function myfunction(str){
 
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {

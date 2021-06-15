@@ -7,8 +7,9 @@
               </div>
       </div>
 
-    
+      <h1 style="text-align:center">Top Reading</h1>
       <?php 
+      
 $views_query=mysqli_query($connection,"SELECT * FROM `articles` ORDER BY `views` DESC LIMIT 3");
 if(mysqli_num_rows($views_query)>0){
     while($views_row=mysqli_fetch_assoc($views_query)){
@@ -17,7 +18,7 @@ if(mysqli_num_rows($views_query)>0){
 <div id="featured">
         <ul>
           <li>
-          <h2><?php echo $views_row[title] ?></h2>
+          <h3><?php echo $views_row[title] ?></h3>
           <p ><img src=<?php echo $views_row[image] ?> style="width:100%;height:125px;"alt="" /></p>
           <p><?php echo mb_substr(strip_tags($views_row['text']),0,200,'utf-8') . ' ...';?></p> 
             <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>

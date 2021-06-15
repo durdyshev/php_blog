@@ -15,16 +15,16 @@ include "db.php";
       <h1><a href="../index.php"><?php echo $config[title]; ?></a></h1>
       <p>Free Website Template</p>
     </div>
-    <div class="fl_right" style="width: 200px; float:right">
-   <ul >
+    <div class="fl_right" style="width: 200px; float:right; ">
+   <ul  style="margin-top:30px">
  
    <?php
    @session_start();
    if($_SESSION['haha']==null){
 ?>
-<li> <a style="color:white a.hover{color:black}"  href="../includes/login.php">Login </a>
+<li style="float:left;margin-right:30px;"> <a style="color:white"  href="../includes/login.php">Login </a>
  </li>
- <li><a style="color:white a.hover{color:black}"  href="../includes/register.php">Register </a></li>
+ <li><a style="color:white; a:hover{color:red} "   href="../includes/register.php">Register </a></li>
 
 <?php
    }
